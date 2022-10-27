@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/drawable/bg_text_discount.xml" value="0.2825" />
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/drawable/ic_add.xml" value="0.1875" />
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/drawable/ic_rating.xml" value="0.2825" />
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/layout-v23/fragment_product_details.xml" value="0.175" />
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/layout/activity_products.xml" value="0.25" />
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/layout/fragment_product_details.xml" value="0.33" />
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/layout/fragment_products.xml" value="0.1546875" />
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/layout/item_carousel_item.xml" value="0.1546875" />
+        <entry key="..\:/Users/Bell-Kenz/AndroidStudioProjects/SerinoTechExam/app/src/main/res/layout/item_product.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

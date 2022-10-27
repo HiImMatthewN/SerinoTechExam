@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="4dp"
+    android:paddingBottom="4dp"
+    >
+    <androidx.cardview.widget.CardView
+        android:elevation="8dp"
+        android:id="@+id/containerThumbnail"
+        app:cardCornerRadius="8dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="3:4"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:foreground="?android:selectableItemBackground"
+            android:id="@+id/ivThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/image_dummy" />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:elevation="8dp"
+        android:id="@+id/tvDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_text_discount"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="4dp"
+        android:text="- 24%"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/containerThumbnail"
+        app:layout_constraintTop_toTopOf="@id/containerThumbnail" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="Prodouct Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerThumbnail" />
+
+    <TextView
+
+        android:id="@+id/tvDiscountedPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="$235"
+        android:textColor="@color/discount"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvOriginalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="$299"
+        android:textColor="@color/color_text_default"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvDiscountedPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="@color/color_text_default"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/tvName"
+        app:layout_constraintBottom_toBottomOf="@id/tvDiscountedPrice"
+        app:layout_constraintTop_toTopOf="@id/tvDiscountedPrice"
+         />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/color_text_default"
+        android:text="4.5"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/tvDiscountedPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvDiscountedPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/ic_rating" />
+</androidx.constraintlayout.widget.ConstraintLayout>

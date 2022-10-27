@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    app:startDestination="@id/productsFragment">
+
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.nantesmatthew.serinotechexam.products.presentation.ProductDetailsFragment"
+        android:label="ProductDetailsFragment" />
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.nantesmatthew.serinotechexam.products.presentation.ProductsFragment"
+        android:label="ProductsFragment" >
+        <action
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/stationary"
+            app:popEnterAnim="@anim/stationary"
+            app:popExitAnim="@anim/slide_down"
+            android:id="@+id/action_productsFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+</navigation>
