@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 interface ProductRepository {
 
 
-     fun products():Flow<PagingData<Product>>
+     fun products():Flow<List<Product>>
 
      fun product(id:Int):Flow<Resource<Product>>
 

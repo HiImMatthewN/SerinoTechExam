@@ -13,7 +13,7 @@ import com.nantesmatthew.serinotechexam.databinding.ItemProductBinding
 import com.nantesmatthew.serinotechexam.products.domain.Product
 
 class ProductAdapter :
-    PagingDataAdapter<Product, ProductAdapter.ProductViewHolder>(UIMODEL_COMPARATOR) {
+    ListAdapter<Product, ProductAdapter.ProductViewHolder>(UIMODEL_COMPARATOR) {
 
     var onProductSelect: ((product: Product) -> Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {

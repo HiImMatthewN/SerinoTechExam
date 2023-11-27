@@ -15,25 +15,14 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class ProductRepositoryImpl @Inject constructor(
-    private val api: ProductApi, private val dao: ProductDao,
-    private val remoteKeysDao: RemoteKeysDao
-) : ProductRepository {
+    private val api: ProductApi, private val dao: ProductDao) : ProductRepository {
 
     companion object {
         private const val TAG = "ProductRepositoryImpl"
     }
 
-    override fun products(): Flow<PagingData<Product>> {
-        Log.d(TAG, "products: test")
-        @OptIn(ExperimentalPagingApi::class)
-        return Pager(
-            remoteMediator = ProductRemoteMediator(
-                api,
-                remoteKeysDao,
-                dao
-            ),
-            pagingSourceFactory = { dao.getProducts() }, config = PagingConfig(10)
-        ).flow.map { it.map { it.toDomain() } }
+    override fun products(): Flow<List<Product>> {
+        return dao.getProducts().map { entities-> entities.map { entity-> entity.toDomain() } }
     }
 
     override  fun product(id: Int): Flow<Resource<Product>> = flow {

@@ -17,7 +17,7 @@ class ProductsViewModel @Inject constructor(
         private const val TAG = "ProductsViewModel"
     }
 
-    val productList = getProductsUseCase().cachedIn(viewModelScope).asLiveData()
+    val productList = getProductsUseCase().asLiveData()
 
 
 

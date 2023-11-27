@@ -38,8 +38,8 @@ class ProductsFragment : Fragment() {
             findNavController().navigate(R.id.action_productsFragment_to_productDetailsFragment,bundle)
         }
 
-        productViewModel.productList.observe(viewLifecycleOwner) {
-            adapterProduct.submitData(lifecycle, it)
+        productViewModel.productList.observe(viewLifecycleOwner) {products->
+            adapterProduct.submitList(products)
         }
 
     }

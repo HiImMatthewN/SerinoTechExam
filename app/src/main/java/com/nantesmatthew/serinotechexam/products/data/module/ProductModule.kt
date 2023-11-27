@@ -3,7 +3,6 @@ package com.nantesmatthew.serinotechexam.products.data.module
 import com.nantesmatthew.serinotechexam.core.db.AppDatabase
 import com.nantesmatthew.serinotechexam.products.data.data_source.ProductApi
 import com.nantesmatthew.serinotechexam.products.data.data_source.ProductDao
-import com.nantesmatthew.serinotechexam.products.data.data_source.RemoteKeysDao
 import com.nantesmatthew.serinotechexam.products.data.repository.ProductRepositoryImpl
 import com.nantesmatthew.serinotechexam.products.domain.repository.ProductRepository
 import dagger.Module
@@ -26,14 +25,10 @@ class ProductModule {
     fun providesProductDao(appDatabase: AppDatabase):ProductDao =
         appDatabase.productDao()
 
-    @Provides
-    fun providesRemoteKeysDao(appDatabase: AppDatabase):RemoteKeysDao =
-        appDatabase.remoteKeysDao()
-
 
     @Provides
-    fun providesProductRepository(api: ProductApi,productDao:ProductDao,remoteKeysDao: RemoteKeysDao):ProductRepository
-     = ProductRepositoryImpl(api,productDao,remoteKeysDao)
+    fun providesProductRepository(api: ProductApi,dao:ProductDao):ProductRepository
+     = ProductRepositoryImpl(api,dao)
 
 
 
